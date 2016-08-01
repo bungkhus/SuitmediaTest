@@ -1,2 +1,2 @@
 # SuitmediaTest
-This is my screening test.
+This is my ios screening test.
