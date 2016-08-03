@@ -1,20 +1,21 @@
 //
-//  Event.swift
+//  Guest.swift
 //  Suitmedia Test
 //
-//  Created by Bungkhus on 8/1/16.
+//  Created by Bungkhus on 8/3/16.
 //  Copyright © 2016 Bungkhus. All rights reserved.
 //
+
 import UIKit
 
-struct Event {
+struct Guest {
     var name: String?
-    var date: NSDate?
+    var birthdate: NSDate?
     var image: String?
     
-    init(name: String?, date: NSDate?, image: String?) {
+    init(name: String?, birthdate: NSDate?, image: String?) {
         self.name = name
-        self.date = date
+        self.birthdate = birthdate
         self.image = image
     }
 }

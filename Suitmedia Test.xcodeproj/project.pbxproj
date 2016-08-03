@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6A31D55FDA338CAC8A4A8A82 /* Pods_Suitmedia_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2D38D21C4E476791FDFDD3 /* Pods_Suitmedia_Test.framework */; };
+		8F5E90BE1D51AE7900E5B697 /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E90BD1D51AE7900E5B697 /* Guest.swift */; };
+		8F5E90C01D51DE2600E5B697 /* GuestCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E90BF1D51DE2600E5B697 /* GuestCollectionViewController.swift */; };
+		8F5E90C21D51DF0900E5B697 /* GuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E90C11D51DF0900E5B697 /* GuestCell.swift */; };
 		8FD0A8D11D4F041E00E8AB58 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0A8D01D4F041E00E8AB58 /* EventTableViewController.swift */; };
 		8FD0A8D31D4F092700E8AB58 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0A8D21D4F092700E8AB58 /* HomeViewController.swift */; };
 		8FD0A8D51D4F0C7100E8AB58 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0A8D41D4F0C7100E8AB58 /* Event.swift */; };
@@ -20,6 +23,9 @@
 
 /* Begin PBXFileReference section */
 		7C2D38D21C4E476791FDFDD3 /* Pods_Suitmedia_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Suitmedia_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F5E90BD1D51AE7900E5B697 /* Guest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
+		8F5E90BF1D51DE2600E5B697 /* GuestCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestCollectionViewController.swift; sourceTree = "<group>"; };
+		8F5E90C11D51DF0900E5B697 /* GuestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestCell.swift; sourceTree = "<group>"; };
 		8FD0A8D01D4F041E00E8AB58 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		8FD0A8D21D4F092700E8AB58 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8FD0A8D41D4F0C7100E8AB58 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -85,6 +91,9 @@
 				8FD0A8D21D4F092700E8AB58 /* HomeViewController.swift */,
 				8FD0A8D41D4F0C7100E8AB58 /* Event.swift */,
 				8FD0A8D61D4F0FBF00E8AB58 /* EventCell.swift */,
+				8F5E90BD1D51AE7900E5B697 /* Guest.swift */,
+				8F5E90BF1D51DE2600E5B697 /* GuestCollectionViewController.swift */,
+				8F5E90C11D51DF0900E5B697 /* GuestCell.swift */,
 			);
 			path = "Suitmedia Test";
 			sourceTree = "<group>";
@@ -219,11 +228,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F5E90C21D51DF0900E5B697 /* GuestCell.swift in Sources */,
 				8FD0A8D51D4F0C7100E8AB58 /* Event.swift in Sources */,
 				8FD0A8D11D4F041E00E8AB58 /* EventTableViewController.swift in Sources */,
 				8FD0A8D71D4F0FBF00E8AB58 /* EventCell.swift in Sources */,
 				8FEEFB721D4B07C700480727 /* AppDelegate.swift in Sources */,
+				8F5E90BE1D51AE7900E5B697 /* Guest.swift in Sources */,
 				8FD0A8D31D4F092700E8AB58 /* HomeViewController.swift in Sources */,
+				8F5E90C01D51DE2600E5B697 /* GuestCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

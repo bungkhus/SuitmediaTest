@@ -4,8 +4,8 @@
 target 'Suitmedia Test' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  pod 'AFNetworking', '0.9.1'
   pod 'PKHUD'
+  pod 'Arrow'
 
   # Pods for Suitmedia Test
 

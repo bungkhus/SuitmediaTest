@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AFNetworking.xcscheme</key>
+		<key>Arrow.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6C994124A71D92650F97FC9E362CBF0F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A484A7D01C06027CD2AECEE837D3D876</key>
+		<key>C8A8FC0D9B1756F490168E2526F4AAA0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>F6F0516F82D07656D12F1C0716898F73</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FD4BB2B0F4E3D0E88AC6E8A9A480D5B3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

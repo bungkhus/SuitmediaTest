@@ -20,6 +20,11 @@ class HomeViewController: UIViewController {
             btEvent.setTitle(event, forState: .Normal)
         }
     }
+    var guest:String? {
+        didSet {
+            btGuest.setTitle(guest, forState: .Normal)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +50,9 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func unwindWithSelectedGuest(segue:UIStoryboardSegue) {
-        
+        let guestViewController = segue.sourceViewController as? GuestCollectionViewController
+        guest = guestViewController?.selectedGuest
+        print("guest")
     }
 
 }

@@ -1,15 +1,15 @@
 PODS:
-  - AFNetworking (0.9.1)
+  - Arrow (2.0.2)
   - PKHUD (3.2.1)
 
 DEPENDENCIES:
-  - AFNetworking (= 0.9.1)
+  - Arrow
   - PKHUD
 
 SPEC CHECKSUMS:
-  AFNetworking: 7878df8698de3b1523a065629ebd4b24f5bb8cbc
+  Arrow: fcb55a3e016392313450bde2664ac2607c83edbc
   PKHUD: 001c11518f125a273ddf026bcc64918423744ea2
 
-PODFILE CHECKSUM: 2cff03db6d995b0e1f35c7508b8b5673351befa3
+PODFILE CHECKSUM: b6bfee9b859be5bd54da513f8f683bcfb6cefe5a
 
 COCOAPODS: 1.0.1
