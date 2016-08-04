@@ -7,63 +7,71 @@
 //
 
 import UIKit
+import AlamofireObjectMapper
+import Alamofire
 
 class GuestCollectionViewController: UICollectionViewController {
 
     private let reuseIdentifier = "GuestCell"
-    let guests = [
-        Guest(name:"Bill Evans", birthdate: NSDate(), image:"logo"),
-        Guest(name: "Oscar Peterson", birthdate: NSDate(), image: "logo"),
-        Guest(name: "Dave Brubeck", birthdate: NSDate(), image: "logo") ]
+//    var guests = [
+//        Guest(name:"Bill Evans", birthdate: NSDate(), image:"logo"),
+//        Guest(name: "Oscar Peterson", birthdate: NSDate(), image: "logo"),
+//        Guest(name: "Dave Brubeck", birthdate: NSDate(), image: "logo") ]
+    var datas = [GuestMappable]()
     var selectedGuest:String?
     var selectedBirthdateGuest:NSDate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let strURL = "http://dry-sierra-6832.herokuapp.com/api/people"
+        Alamofire.request(.GET, strURL).responseArray { (response: Response<[GuestMappable], NSError>) in
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-//        self.collectionView!.registerClass(GuestCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+            let forecastArray = response.result.value
+            if forecastArray != nil{
+                self.datas = forecastArray!
+                self.collectionView!.reloadData()
+            }
+            
+//            if let forecastArray = forecastArray {
+//                for forecast in forecastArray {
+//                    print(forecast.id)
+//                    print(forecast.name)
+//                }
+//            }
+        }
+//        AFWrapper.requestGETURL(strURL, success: {
+//            (JSONResponse) -> Void in
+////            print(JSONResponse)
+//            for data in JSONResponse {
+//                let guest = Guest.initialData(data.1)
+//                print(guest)
+//            }
+//        }) {
+//            (error) -> Void in
+//            print(error)
+//        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: UICollectionViewDataSource
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return guests.count
+        return datas.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("GuestCell", forIndexPath: indexPath) as! GuestCell
         
-        let guest = guests[indexPath.row] as Guest
-        cell.guestNameLabel.text = guest.name
-        cell.geustImage.image = UIImage(named: "logo")
+//        let guest = guests[indexPath.row] as Guest
+//        cell.guestNameLabel.text = guest.name
+//        cell.geustImage.image = UIImage(named: "logo")
+        cell.data = self.datas[indexPath.row]
         
         return cell
     }
@@ -83,40 +91,9 @@ class GuestCollectionViewController: UICollectionViewController {
         if segue.identifier == "SelectGuest" {
             if let cell = sender as? UICollectionViewCell, indexPath = collectionView!.indexPathForCell(cell) {
                 let indeks = indexPath.row
-                selectedGuest = guests[indeks].name
+                selectedGuest = datas[indeks].name
             }
         }
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(collectionView: UICollectionView, shouldShowMenuForItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(collectionView: UICollectionView, canPerformAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
-        return false
-    }
-
-    override func collectionView(collectionView: UICollectionView, performAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
-    
-    }
-    */
 
 }

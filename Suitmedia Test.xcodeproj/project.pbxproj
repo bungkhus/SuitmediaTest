@@ -13,6 +13,7 @@
 		8F5E90C21D51DF0900E5B697 /* GuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E90C11D51DF0900E5B697 /* GuestCell.swift */; };
 		8FA78D961D531A210045BB3B /* AFWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA78D951D531A210045BB3B /* AFWrapper.swift */; };
 		8FA78D981D531B950045BB3B /* MasukViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA78D971D531B950045BB3B /* MasukViewController.swift */; };
+		8FA78D9A1D533A4F0045BB3B /* GuestMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA78D991D533A4F0045BB3B /* GuestMappable.swift */; };
 		8FD0A8D11D4F041E00E8AB58 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0A8D01D4F041E00E8AB58 /* EventTableViewController.swift */; };
 		8FD0A8D31D4F092700E8AB58 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0A8D21D4F092700E8AB58 /* HomeViewController.swift */; };
 		8FD0A8D51D4F0C7100E8AB58 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0A8D41D4F0C7100E8AB58 /* Event.swift */; };
@@ -30,6 +31,7 @@
 		8F5E90C11D51DF0900E5B697 /* GuestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestCell.swift; sourceTree = "<group>"; };
 		8FA78D951D531A210045BB3B /* AFWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFWrapper.swift; sourceTree = "<group>"; };
 		8FA78D971D531B950045BB3B /* MasukViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasukViewController.swift; sourceTree = "<group>"; };
+		8FA78D991D533A4F0045BB3B /* GuestMappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestMappable.swift; sourceTree = "<group>"; };
 		8FD0A8D01D4F041E00E8AB58 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		8FD0A8D21D4F092700E8AB58 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8FD0A8D41D4F0C7100E8AB58 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			children = (
 				8FD0A8D41D4F0C7100E8AB58 /* Event.swift */,
 				8F5E90BD1D51AE7900E5B697 /* Guest.swift */,
+				8FA78D991D533A4F0045BB3B /* GuestMappable.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				8FEEFB721D4B07C700480727 /* AppDelegate.swift in Sources */,
 				8F5E90BE1D51AE7900E5B697 /* Guest.swift in Sources */,
 				8FD0A8D31D4F092700E8AB58 /* HomeViewController.swift in Sources */,
+				8FA78D9A1D533A4F0045BB3B /* GuestMappable.swift in Sources */,
 				8FA78D961D531A210045BB3B /* AFWrapper.swift in Sources */,
 				8F5E90C01D51DE2600E5B697 /* GuestCollectionViewController.swift in Sources */,
 			);

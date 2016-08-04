@@ -12,15 +12,7 @@ class MasukViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let strURL = "http://dry-sierra-6832.herokuapp.com/api/people"
         
-        AFWrapper.requestGETURL(strURL, success: {
-            (JSONResponse) -> Void in
-            print(JSONResponse)
-        }) {
-            (error) -> Void in
-            print(error)
-        }
         // Do any additional setup after loading the view.
     }
 
