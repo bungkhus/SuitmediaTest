@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Masuk View Controller-->
         <scene sceneID="gxv-sm-PVC">
             <objects>
-                <viewController id="27f-1P-iB7" sceneMemberID="viewController">
+                <viewController id="27f-1P-iB7" customClass="MasukViewController" customModule="Suitmedia_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oBN-VV-PaR"/>
                         <viewControllerLayoutGuide type="bottom" id="64s-CZ-8Hg"/>

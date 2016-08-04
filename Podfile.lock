@@ -1,15 +1,26 @@
 PODS:
-  - Arrow (2.0.2)
+  - Alamofire (3.4.1)
   - PKHUD (3.2.1)
+  - Realm (1.0.2):
+    - Realm/Headers (= 1.0.2)
+  - Realm/Headers (1.0.2)
+  - RealmSwift (1.0.2):
+    - Realm (= 1.0.2)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
-  - Arrow
+  - Alamofire
   - PKHUD
+  - RealmSwift
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Arrow: fcb55a3e016392313450bde2664ac2607c83edbc
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   PKHUD: 001c11518f125a273ddf026bcc64918423744ea2
+  Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
+  RealmSwift: 82f3ac5e24530143dddfde2033acc0d308f27d96
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: b6bfee9b859be5bd54da513f8f683bcfb6cefe5a
+PODFILE CHECKSUM: e4954d414e813e75f25fcfc84d757176a8b85a0f
 
 COCOAPODS: 1.0.1
