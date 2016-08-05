@@ -8,17 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		6A31D55FDA338CAC8A4A8A82 /* Pods_Suitmedia_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2D38D21C4E476791FDFDD3 /* Pods_Suitmedia_Test.framework */; };
-		8F5E90BE1D51AE7900E5B697 /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E90BD1D51AE7900E5B697 /* Guest.swift */; };
-		8F5E90C01D51DE2600E5B697 /* GuestCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E90BF1D51DE2600E5B697 /* GuestCollectionViewController.swift */; };
-		8F5E90C21D51DF0900E5B697 /* GuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E90C11D51DF0900E5B697 /* GuestCell.swift */; };
-		8FA78D961D531A210045BB3B /* AFWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA78D951D531A210045BB3B /* AFWrapper.swift */; };
-		8FA78D981D531B950045BB3B /* MasukViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA78D971D531B950045BB3B /* MasukViewController.swift */; };
-		8FA78D9A1D533A4F0045BB3B /* GuestMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA78D991D533A4F0045BB3B /* GuestMappable.swift */; };
-		8FD0A8D11D4F041E00E8AB58 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0A8D01D4F041E00E8AB58 /* EventTableViewController.swift */; };
-		8FD0A8D31D4F092700E8AB58 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0A8D21D4F092700E8AB58 /* HomeViewController.swift */; };
-		8FD0A8D51D4F0C7100E8AB58 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0A8D41D4F0C7100E8AB58 /* Event.swift */; };
-		8FD0A8D71D4F0FBF00E8AB58 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0A8D61D4F0FBF00E8AB58 /* EventCell.swift */; };
-		8FEEFB721D4B07C700480727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEFB711D4B07C700480727 /* AppDelegate.swift */; };
+		8F2F9CD01D548CE600E0ECFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F9CCF1D548CE600E0ECFF /* AppDelegate.swift */; };
+		8F2F9CD91D548D0C00E0ECFF /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F9CD51D548D0C00E0ECFF /* EventTableViewController.swift */; };
+		8F2F9CDA1D548D0C00E0ECFF /* GuestCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F9CD61D548D0C00E0ECFF /* GuestCollectionViewController.swift */; };
+		8F2F9CDB1D548D0C00E0ECFF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F9CD71D548D0C00E0ECFF /* HomeViewController.swift */; };
+		8F2F9CDC1D548D0C00E0ECFF /* MasukViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F9CD81D548D0C00E0ECFF /* MasukViewController.swift */; };
+		8F2F9CE21D548D2300E0ECFF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F2F9CE11D548D2300E0ECFF /* Info.plist */; };
+		8F2F9CE71D548D2D00E0ECFF /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F9CE31D548D2D00E0ECFF /* Event.swift */; };
+		8F2F9CE81D548D2D00E0ECFF /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F9CE41D548D2D00E0ECFF /* Guest.swift */; };
+		8F2F9CEC1D54B3D100E0ECFF /* GuestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F9CEB1D54B3D000E0ECFF /* GuestInteractor.swift */; };
+		8F2F9CEF1D54BA2000E0ECFF /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F9CED1D54BA2000E0ECFF /* EventCell.swift */; };
+		8F2F9CF01D54BA2000E0ECFF /* GuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F9CEE1D54BA2000E0ECFF /* GuestCell.swift */; };
+		8FA286281D547E0300B91D06 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA286271D547E0300B91D06 /* Default-568h@2x.png */; };
 		8FEEFB771D4B07C700480727 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FEEFB751D4B07C700480727 /* Main.storyboard */; };
 		8FEEFB791D4B07C700480727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FEEFB781D4B07C700480727 /* Assets.xcassets */; };
 		8FEEFB7C1D4B07C700480727 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FEEFB7A1D4B07C700480727 /* LaunchScreen.storyboard */; };
@@ -26,22 +27,22 @@
 
 /* Begin PBXFileReference section */
 		7C2D38D21C4E476791FDFDD3 /* Pods_Suitmedia_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Suitmedia_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F5E90BD1D51AE7900E5B697 /* Guest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
-		8F5E90BF1D51DE2600E5B697 /* GuestCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestCollectionViewController.swift; sourceTree = "<group>"; };
-		8F5E90C11D51DF0900E5B697 /* GuestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestCell.swift; sourceTree = "<group>"; };
-		8FA78D951D531A210045BB3B /* AFWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFWrapper.swift; sourceTree = "<group>"; };
-		8FA78D971D531B950045BB3B /* MasukViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasukViewController.swift; sourceTree = "<group>"; };
-		8FA78D991D533A4F0045BB3B /* GuestMappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestMappable.swift; sourceTree = "<group>"; };
-		8FD0A8D01D4F041E00E8AB58 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
-		8FD0A8D21D4F092700E8AB58 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		8FD0A8D41D4F0C7100E8AB58 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		8FD0A8D61D4F0FBF00E8AB58 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		8F2F9CCF1D548CE600E0ECFF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Application/AppDelegate.swift; sourceTree = "<group>"; };
+		8F2F9CD51D548D0C00E0ECFF /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventTableViewController.swift; path = Controller/EventTableViewController.swift; sourceTree = "<group>"; };
+		8F2F9CD61D548D0C00E0ECFF /* GuestCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GuestCollectionViewController.swift; path = Controller/GuestCollectionViewController.swift; sourceTree = "<group>"; };
+		8F2F9CD71D548D0C00E0ECFF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controller/HomeViewController.swift; sourceTree = "<group>"; };
+		8F2F9CD81D548D0C00E0ECFF /* MasukViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasukViewController.swift; path = Controller/MasukViewController.swift; sourceTree = "<group>"; };
+		8F2F9CE11D548D2300E0ECFF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F2F9CE31D548D2D00E0ECFF /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = Model/Event.swift; sourceTree = "<group>"; };
+		8F2F9CE41D548D2D00E0ECFF /* Guest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Guest.swift; path = Model/Guest.swift; sourceTree = "<group>"; };
+		8F2F9CEB1D54B3D000E0ECFF /* GuestInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GuestInteractor.swift; path = Interactor/GuestInteractor.swift; sourceTree = "<group>"; };
+		8F2F9CED1D54BA2000E0ECFF /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventCell.swift; path = View/EventCell.swift; sourceTree = "<group>"; };
+		8F2F9CEE1D54BA2000E0ECFF /* GuestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GuestCell.swift; path = View/GuestCell.swift; sourceTree = "<group>"; };
+		8FA286271D547E0300B91D06 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8FEEFB6E1D4B07C700480727 /* Suitmedia Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Suitmedia Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FEEFB711D4B07C700480727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FEEFB761D4B07C700480727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FEEFB781D4B07C700480727 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FEEFB7B1D4B07C700480727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8FEEFB7D1D4B07C700480727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94CF3533BF54135265DC4A40 /* Pods-Suitmedia Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Suitmedia Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Suitmedia Test/Pods-Suitmedia Test.debug.xcconfig"; sourceTree = "<group>"; };
 		E236B4DC8EAE0C4B2E150AB5 /* Pods-Suitmedia Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Suitmedia Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Suitmedia Test/Pods-Suitmedia Test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,57 +68,55 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		8FA78D541D52FAFD0045BB3B /* Model */ = {
+		8F2F9CF11D54BA4B00E0ECFF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8FD0A8D41D4F0C7100E8AB58 /* Event.swift */,
-				8F5E90BD1D51AE7900E5B697 /* Guest.swift */,
-				8FA78D991D533A4F0045BB3B /* GuestMappable.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		8FA78D551D52FB1F0045BB3B /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				8FD0A8D01D4F041E00E8AB58 /* EventTableViewController.swift */,
-				8FD0A8D21D4F092700E8AB58 /* HomeViewController.swift */,
-				8F5E90BF1D51DE2600E5B697 /* GuestCollectionViewController.swift */,
-				8FA78D971D531B950045BB3B /* MasukViewController.swift */,
-			);
-			name = ViewController;
-			sourceTree = "<group>";
-		};
-		8FA78D561D52FB360045BB3B /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				8FD0A8D61D4F0FBF00E8AB58 /* EventCell.swift */,
-				8F5E90C11D51DF0900E5B697 /* GuestCell.swift */,
-			);
-			name = Cell;
-			sourceTree = "<group>";
-		};
-		8FA78D571D52FCA50045BB3B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				8FA78D561D52FB360045BB3B /* Cell */,
-				8FEEFB751D4B07C700480727 /* Main.storyboard */,
-				8FEEFB7A1D4B07C700480727 /* LaunchScreen.storyboard */,
+				8F2F9CED1D54BA2000E0ECFF /* EventCell.swift */,
+				8F2F9CEE1D54BA2000E0ECFF /* GuestCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
 		};
-		8FA78D581D52FDD10045BB3B /* Helper */ = {
+		8F2F9CF21D54BA5300E0ECFF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8FA78D951D531A210045BB3B /* AFWrapper.swift */,
+				8F2F9CE31D548D2D00E0ECFF /* Event.swift */,
+				8F2F9CE41D548D2D00E0ECFF /* Guest.swift */,
 			);
-			name = Helper;
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8F2F9CF31D54BA5F00E0ECFF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8F2F9CD51D548D0C00E0ECFF /* EventTableViewController.swift */,
+				8F2F9CD61D548D0C00E0ECFF /* GuestCollectionViewController.swift */,
+				8F2F9CD71D548D0C00E0ECFF /* HomeViewController.swift */,
+				8F2F9CD81D548D0C00E0ECFF /* MasukViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8F2F9CF41D54BA6700E0ECFF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				8F2F9CCF1D548CE600E0ECFF /* AppDelegate.swift */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		8F2F9CF51D54BA7200E0ECFF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8F2F9CEB1D54B3D000E0ECFF /* GuestInteractor.swift */,
+			);
+			name = Interactor;
 			sourceTree = "<group>";
 		};
 		8FEEFB651D4B07C700480727 = {
 			isa = PBXGroup;
 			children = (
+				8FA286271D547E0300B91D06 /* Default-568h@2x.png */,
 				8FEEFB701D4B07C700480727 /* Suitmedia Test */,
 				8FEEFB6F1D4B07C700480727 /* Products */,
 				6D03444C699D6CB46E58771B /* Pods */,
@@ -136,13 +135,15 @@
 		8FEEFB701D4B07C700480727 /* Suitmedia Test */ = {
 			isa = PBXGroup;
 			children = (
+				8F2F9CF11D54BA4B00E0ECFF /* View */,
+				8F2F9CF21D54BA5300E0ECFF /* Model */,
+				8F2F9CE11D548D2300E0ECFF /* Info.plist */,
+				8F2F9CF31D54BA5F00E0ECFF /* Controller */,
+				8F2F9CF41D54BA6700E0ECFF /* Application */,
+				8FEEFB751D4B07C700480727 /* Main.storyboard */,
+				8FEEFB7A1D4B07C700480727 /* LaunchScreen.storyboard */,
 				8FEEFB781D4B07C700480727 /* Assets.xcassets */,
-				8FA78D551D52FB1F0045BB3B /* ViewController */,
-				8FA78D581D52FDD10045BB3B /* Helper */,
-				8FA78D541D52FAFD0045BB3B /* Model */,
-				8FA78D571D52FCA50045BB3B /* View */,
-				8FEEFB711D4B07C700480727 /* AppDelegate.swift */,
-				8FEEFB7D1D4B07C700480727 /* Info.plist */,
+				8F2F9CF51D54BA7200E0ECFF /* Interactor */,
 			);
 			path = "Suitmedia Test";
 			sourceTree = "<group>";
@@ -217,7 +218,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FEEFB7C1D4B07C700480727 /* LaunchScreen.storyboard in Resources */,
+				8FA286281D547E0300B91D06 /* Default-568h@2x.png in Resources */,
 				8FEEFB791D4B07C700480727 /* Assets.xcassets in Resources */,
+				8F2F9CE21D548D2300E0ECFF /* Info.plist in Resources */,
 				8FEEFB771D4B07C700480727 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,17 +280,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F5E90C21D51DF0900E5B697 /* GuestCell.swift in Sources */,
-				8FD0A8D51D4F0C7100E8AB58 /* Event.swift in Sources */,
-				8FD0A8D11D4F041E00E8AB58 /* EventTableViewController.swift in Sources */,
-				8FD0A8D71D4F0FBF00E8AB58 /* EventCell.swift in Sources */,
-				8FA78D981D531B950045BB3B /* MasukViewController.swift in Sources */,
-				8FEEFB721D4B07C700480727 /* AppDelegate.swift in Sources */,
-				8F5E90BE1D51AE7900E5B697 /* Guest.swift in Sources */,
-				8FD0A8D31D4F092700E8AB58 /* HomeViewController.swift in Sources */,
-				8FA78D9A1D533A4F0045BB3B /* GuestMappable.swift in Sources */,
-				8FA78D961D531A210045BB3B /* AFWrapper.swift in Sources */,
-				8F5E90C01D51DE2600E5B697 /* GuestCollectionViewController.swift in Sources */,
+				8F2F9CF01D54BA2000E0ECFF /* GuestCell.swift in Sources */,
+				8F2F9CDA1D548D0C00E0ECFF /* GuestCollectionViewController.swift in Sources */,
+				8F2F9CEF1D54BA2000E0ECFF /* EventCell.swift in Sources */,
+				8F2F9CE81D548D2D00E0ECFF /* Guest.swift in Sources */,
+				8F2F9CDC1D548D0C00E0ECFF /* MasukViewController.swift in Sources */,
+				8F2F9CE71D548D2D00E0ECFF /* Event.swift in Sources */,
+				8F2F9CD01D548CE600E0ECFF /* AppDelegate.swift in Sources */,
+				8F2F9CD91D548D0C00E0ECFF /* EventTableViewController.swift in Sources */,
+				8F2F9CEC1D54B3D100E0ECFF /* GuestInteractor.swift in Sources */,
+				8F2F9CDB1D548D0C00E0ECFF /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,10 +405,12 @@
 			baseConfigurationReference = 94CF3533BF54135265DC4A40 /* Pods-Suitmedia Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Suitmedia Test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bungkhus.ministudio.Suitmedia-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -416,6 +420,7 @@
 			baseConfigurationReference = E236B4DC8EAE0C4B2E150AB5 /* Pods-Suitmedia Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Suitmedia Test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bungkhus.ministudio.Suitmedia-Test";

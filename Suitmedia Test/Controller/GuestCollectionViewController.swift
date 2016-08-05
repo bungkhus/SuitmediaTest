@@ -7,49 +7,60 @@
 //
 
 import UIKit
-import AlamofireObjectMapper
 import Alamofire
+import AlamofireObjectMapper
+import RealmSwift
+import ObjectMapper
+import SwiftyJSON
+import PKHUD
 
 class GuestCollectionViewController: UICollectionViewController {
 
+    let realm = try! Realm()
     private let reuseIdentifier = "GuestCell"
-//    var guests = [
-//        Guest(name:"Bill Evans", birthdate: NSDate(), image:"logo"),
-//        Guest(name: "Oscar Peterson", birthdate: NSDate(), image: "logo"),
-//        Guest(name: "Dave Brubeck", birthdate: NSDate(), image: "logo") ]
-    var datas = [GuestMappable]()
+    var datas = [Guest]()
     var selectedGuest:String?
     var selectedBirthdateGuest:NSDate?
+    var guestModel = Guest()
+    let url = "http://dry-sierra-6832.herokuapp.com/api/people"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let strURL = "http://dry-sierra-6832.herokuapp.com/api/people"
-        Alamofire.request(.GET, strURL).responseArray { (response: Response<[GuestMappable], NSError>) in
-
-            let forecastArray = response.result.value
-            if forecastArray != nil{
-                self.datas = forecastArray!
-                self.collectionView!.reloadData()
-            }
-            
-//            if let forecastArray = forecastArray {
-//                for forecast in forecastArray {
-//                    print(forecast.id)
-//                    print(forecast.name)
-//                }
-//            }
+        self.fetcData()
+    }
+    
+    func fetcData(){
+        Alamofire.request(.GET,url)
+            .responseArray { (response: Response<[Guest], NSError>) in
+                switch response.result {
+                case .Success(let guests):
+                    do {
+                        let realm = try Realm()
+                        self.datas = response.result.value!
+                        self.collectionView!.reloadData()
+                        try realm.write {
+                            for guest in guests {
+                                realm.add(guest,update: true)
+                            }
+                        }
+                    } catch let error as NSError {
+                        print("Guest 1 Error: \(error)")
+                    }
+                case .Failure(let error):
+                    let msg = "You are offline!"
+                    HUD.flash(.Label(msg), delay: 2.0) { _ in
+                        print(error)
+                    }
+                    self.guestModel = Guest()
+                    let results = self.realm.objects(Guest.self)
+                    for guest in results {
+                        self.guestModel = Guest(value: guest)
+                        self.datas.append(self.guestModel)
+                    }
+                    print(results.count)
+                    self.collectionView!.reloadData()
+                }
         }
-//        AFWrapper.requestGETURL(strURL, success: {
-//            (JSONResponse) -> Void in
-////            print(JSONResponse)
-//            for data in JSONResponse {
-//                let guest = Guest.initialData(data.1)
-//                print(guest)
-//            }
-//        }) {
-//            (error) -> Void in
-//            print(error)
-//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,9 +79,6 @@ class GuestCollectionViewController: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("GuestCell", forIndexPath: indexPath) as! GuestCell
         
-//        let guest = guests[indexPath.row] as Guest
-//        cell.guestNameLabel.text = guest.name
-//        cell.geustImage.image = UIImage(named: "logo")
         cell.data = self.datas[indexPath.row]
         
         return cell
