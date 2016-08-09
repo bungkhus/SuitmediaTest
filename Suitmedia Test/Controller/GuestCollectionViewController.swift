@@ -7,60 +7,35 @@
 //
 
 import UIKit
-import Alamofire
-import AlamofireObjectMapper
-import RealmSwift
-import ObjectMapper
-import SwiftyJSON
-import PKHUD
 
 class GuestCollectionViewController: UICollectionViewController {
 
-    let realm = try! Realm()
     private let reuseIdentifier = "GuestCell"
     var datas = [Guest]()
     var selectedGuest:String?
     var selectedBirthdateGuest:NSDate?
-    var guestModel = Guest()
-    let url = "http://dry-sierra-6832.herokuapp.com/api/people"
-    
+    let interactor = GuestInteractor()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.fetcData()
+        self.fetchData()
     }
     
-    func fetcData(){
-        Alamofire.request(.GET,url)
-            .responseArray { (response: Response<[Guest], NSError>) in
-                switch response.result {
-                case .Success(let guests):
-                    do {
-                        let realm = try Realm()
-                        self.datas = response.result.value!
-                        self.collectionView!.reloadData()
-                        try realm.write {
-                            for guest in guests {
-                                realm.add(guest,update: true)
-                            }
-                        }
-                    } catch let error as NSError {
-                        print("Guest 1 Error: \(error)")
-                    }
-                case .Failure(let error):
-                    let msg = "You are offline!"
-                    HUD.flash(.Label(msg), delay: 2.0) { _ in
-                        print(error)
-                    }
-                    self.guestModel = Guest()
-                    let results = self.realm.objects(Guest.self)
-                    for guest in results {
-                        self.guestModel = Guest(value: guest)
-                        self.datas.append(self.guestModel)
-                    }
-                    print(results.count)
-                    self.collectionView!.reloadData()
-                }
-        }
+    private func fetchData(){
+        print("fetching...")
+        interactor.fetcData({ guests in
+                print("fetch success")
+                self.datas = self.interactor.datas
+                self.refresh()
+            }, failure: { error in
+                print("fetch failed")
+                self.datas = self.interactor.datas
+                self.refresh()
+        })
+    }
+    
+    private func refresh() {
+        self.collectionView?.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,7 +48,7 @@ class GuestCollectionViewController: UICollectionViewController {
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return datas.count
+        return self.datas.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {

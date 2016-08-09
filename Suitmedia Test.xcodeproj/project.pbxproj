@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6A31D55FDA338CAC8A4A8A82 /* Pods_Suitmedia_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2D38D21C4E476791FDFDD3 /* Pods_Suitmedia_Test.framework */; };
+		8F23E7291D59A7C3009B8BDE /* APIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F23E7281D59A7C3009B8BDE /* APIConnector.swift */; };
 		8F2F9CD01D548CE600E0ECFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F9CCF1D548CE600E0ECFF /* AppDelegate.swift */; };
 		8F2F9CD91D548D0C00E0ECFF /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F9CD51D548D0C00E0ECFF /* EventTableViewController.swift */; };
 		8F2F9CDA1D548D0C00E0ECFF /* GuestCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F9CD61D548D0C00E0ECFF /* GuestCollectionViewController.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		7C2D38D21C4E476791FDFDD3 /* Pods_Suitmedia_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Suitmedia_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F23E7281D59A7C3009B8BDE /* APIConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIConnector.swift; path = Helper/APIConnector.swift; sourceTree = "<group>"; };
 		8F2F9CCF1D548CE600E0ECFF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Application/AppDelegate.swift; sourceTree = "<group>"; };
 		8F2F9CD51D548D0C00E0ECFF /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventTableViewController.swift; path = Controller/EventTableViewController.swift; sourceTree = "<group>"; };
 		8F2F9CD61D548D0C00E0ECFF /* GuestCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GuestCollectionViewController.swift; path = Controller/GuestCollectionViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,14 @@
 				E236B4DC8EAE0C4B2E150AB5 /* Pods-Suitmedia Test.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8F23E7271D59A7AE009B8BDE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				8F23E7281D59A7C3009B8BDE /* APIConnector.swift */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 		8F2F9CF11D54BA4B00E0ECFF /* View */ = {
@@ -135,15 +145,16 @@
 		8FEEFB701D4B07C700480727 /* Suitmedia Test */ = {
 			isa = PBXGroup;
 			children = (
+				8F23E7271D59A7AE009B8BDE /* Helper */,
 				8F2F9CF11D54BA4B00E0ECFF /* View */,
 				8F2F9CF21D54BA5300E0ECFF /* Model */,
 				8F2F9CE11D548D2300E0ECFF /* Info.plist */,
 				8F2F9CF31D54BA5F00E0ECFF /* Controller */,
 				8F2F9CF41D54BA6700E0ECFF /* Application */,
+				8F2F9CF51D54BA7200E0ECFF /* Interactor */,
 				8FEEFB751D4B07C700480727 /* Main.storyboard */,
 				8FEEFB7A1D4B07C700480727 /* LaunchScreen.storyboard */,
 				8FEEFB781D4B07C700480727 /* Assets.xcassets */,
-				8F2F9CF51D54BA7200E0ECFF /* Interactor */,
 			);
 			path = "Suitmedia Test";
 			sourceTree = "<group>";
@@ -290,6 +301,7 @@
 				8F2F9CD91D548D0C00E0ECFF /* EventTableViewController.swift in Sources */,
 				8F2F9CEC1D54B3D100E0ECFF /* GuestInteractor.swift in Sources */,
 				8F2F9CDB1D548D0C00E0ECFF /* HomeViewController.swift in Sources */,
+				8F23E7291D59A7C3009B8BDE /* APIConnector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
