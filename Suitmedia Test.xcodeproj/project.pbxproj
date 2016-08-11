@@ -24,6 +24,7 @@
 		8FEEFB771D4B07C700480727 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FEEFB751D4B07C700480727 /* Main.storyboard */; };
 		8FEEFB791D4B07C700480727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FEEFB781D4B07C700480727 /* Assets.xcassets */; };
 		8FEEFB7C1D4B07C700480727 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FEEFB7A1D4B07C700480727 /* LaunchScreen.storyboard */; };
+		8FF2C6F11D5ADCE1005367D5 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF2C6F01D5ADCE1005367D5 /* BaseInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		8FEEFB761D4B07C700480727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FEEFB781D4B07C700480727 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FEEFB7B1D4B07C700480727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8FF2C6F01D5ADCE1005367D5 /* BaseInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseInteractor.swift; path = Interactor/BaseInteractor.swift; sourceTree = "<group>"; };
 		94CF3533BF54135265DC4A40 /* Pods-Suitmedia Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Suitmedia Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Suitmedia Test/Pods-Suitmedia Test.debug.xcconfig"; sourceTree = "<group>"; };
 		E236B4DC8EAE0C4B2E150AB5 /* Pods-Suitmedia Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Suitmedia Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Suitmedia Test/Pods-Suitmedia Test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				8F2F9CEB1D54B3D000E0ECFF /* GuestInteractor.swift */,
+				8FF2C6F01D5ADCE1005367D5 /* BaseInteractor.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				8F2F9CEF1D54BA2000E0ECFF /* EventCell.swift in Sources */,
 				8F2F9CE81D548D2D00E0ECFF /* Guest.swift in Sources */,
 				8F2F9CDC1D548D0C00E0ECFF /* MasukViewController.swift in Sources */,
+				8FF2C6F11D5ADCE1005367D5 /* BaseInteractor.swift in Sources */,
 				8F2F9CE71D548D2D00E0ECFF /* Event.swift in Sources */,
 				8F2F9CD01D548CE600E0ECFF /* AppDelegate.swift in Sources */,
 				8F2F9CD91D548D0C00E0ECFF /* EventTableViewController.swift in Sources */,

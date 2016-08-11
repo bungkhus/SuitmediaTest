@@ -8,51 +8,42 @@
 
 import Foundation
 import RealmSwift
-import PKHUD
 
-class GuestInteractor {
+class GuestInteractor: BaseInteractor {
     
-    let realm = try! Realm()
     var datas = [Guest]()
     var guestModel = Guest()
-    let msg = "You are offline!"
+    var msg:String?
     
-    func fetcData(success:() -> Void, failure: (NSError) -> Void) -> Void {
-        APIConnector.instanct.getGuests({ guests in
+    func refresh(success:([Guest]) -> Void, failure: (NSError) -> Void) -> Void {
+        api.getGuests({ guests in
             do {
-                let realm = try Realm()
-                self.datas = guests
-                try realm.write {
+                try self.realm.write {
                     for guest in guests {
-                        realm.add(guest,update: true)
+                        self.realm.add(guest,update: true)
                     }
                 }
-                success()
+                self.datas.removeAll()
+                success(self.load())
             } catch let error as NSError {
-                HUD.flash(.Label(self.msg), delay: 2.0) { _ in
-                    print(error)
-                }
-                self.guestModel = Guest()
-                let results = self.realm.objects(Guest.self)
-                for guest in results {
-                    self.guestModel = Guest(value: guest)
-                    self.datas.append(self.guestModel)
-                }
+                self.msg = "Error while interaction with realm"
                 failure(error)
             }
             }, failure: { error in
-                HUD.flash(.Label(self.msg), delay: 2.0) { _ in
-                    print(error)
-                }
-                self.guestModel = Guest()
-                let results = self.realm.objects(Guest.self)
-                for guest in results {
-                    self.guestModel = Guest(value: guest)
-                    self.datas.append(self.guestModel)
-                }
+                self.msg = "Error while requesting data from server!"
                 failure(error)
         })
 
+    }
+    
+    func load() -> [Guest]{
+        self.guestModel = Guest()
+        let results = self.realm.objects(Guest.self)
+        for guest in results {
+            self.guestModel = Guest(value: guest)
+            self.datas.append(self.guestModel)
+        }
+        return self.datas
     }
     
 }

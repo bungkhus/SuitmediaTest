@@ -13,7 +13,7 @@ import ObjectMapper
 
 public class APIConnector {
 
-    public static let instanct = APIConnector()
+    public static let instance = APIConnector()
     let url = "http://dry-sierra-6832.herokuapp.com/api/people"
     
     func getGuests(success:([Guest]) -> Void, failure: (NSError) -> Void) -> Void {

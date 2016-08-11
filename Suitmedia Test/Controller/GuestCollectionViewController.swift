@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PKHUD
 
 class GuestCollectionViewController: UICollectionViewController {
 
@@ -23,19 +24,18 @@ class GuestCollectionViewController: UICollectionViewController {
     
     private func fetchData(){
         print("fetching...")
-        interactor.fetcData({ guests in
-                print("fetch success")
-                self.datas = self.interactor.datas
-                self.refresh()
-            }, failure: { error in
-                print("fetch failed")
-                self.datas = self.interactor.datas
-                self.refresh()
+        HUD.show(.Progress)
+        datas = interactor.load()
+        interactor.refresh({ guests in
+            self.datas = guests
+            self.collectionView?.reloadData()
+            print("fetch success")
+            HUD.hide()
+        }, failure: { error in
+            HUD.flash(.Label(self.interactor.msg), delay: 2.0) { _ in
+                print(error)
+            }
         })
-    }
-    
-    private func refresh() {
-        self.collectionView?.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,7 +74,7 @@ class GuestCollectionViewController: UICollectionViewController {
         if segue.identifier == "SelectGuest" {
             if let cell = sender as? UICollectionViewCell, indexPath = collectionView!.indexPathForCell(cell) {
                 let indeks = indexPath.row
-                selectedGuest = datas[indeks].name
+                selectedGuest = self.datas[indeks].name
             }
         }
     }
